@@ -93,7 +93,7 @@ namespace frmReseñaAnalisis
                 MessageBox.Show("Debe seleccinar un producto de la lista", "Error en ingreso", MessageBoxButtons.OK);
 
             }
-            else if(txtNombre.Text == "" || txtCorreo.Text=="" || nudwValor.Value == 0 )
+            else if(txtNombre.Text == "" || txtCorreo.Text=="" || lstValor.SelectedIndex == -1 )
             {
                 MessageBox.Show("Debe ingresar el nombre, el correo y la valoración para registrar la reseña", "Error en ingreso", MessageBoxButtons.OK);
 
@@ -113,7 +113,7 @@ namespace frmReseñaAnalisis
                     cmd.Parameters["@Correo"].Value = txtCorreo.Text;
 
                     cmd.Parameters.Add(new SqlParameter("@Valor", SqlDbType.Int, 50));
-                    cmd.Parameters["@Valor"].Value = nudwValor.Value;
+                    cmd.Parameters["@Valor"].Value = lstValor.SelectedItems[0];
 
                     cmd.Parameters.Add(new SqlParameter("@Comentarios", SqlDbType.NVarChar, 50));
                     cmd.Parameters["@Comentarios"].Value = txtComentarios.Text;
@@ -136,6 +136,7 @@ namespace frmReseñaAnalisis
                     txtCorreo.Text = "";
                     txtComentarios.Text = "";
                     lstProductos.SelectedItems.Clear();
+                    lstValor.SelectedItems.Clear();
                     txtNombre.Focus();
 
 

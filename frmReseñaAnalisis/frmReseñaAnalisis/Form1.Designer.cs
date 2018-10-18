@@ -36,18 +36,17 @@
             this.lblComentarios = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtCorreo = new System.Windows.Forms.TextBox();
-            this.nudwValor = new System.Windows.Forms.NumericUpDown();
             this.txtComentarios = new System.Windows.Forms.TextBox();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.lstValor = new System.Windows.Forms.ListBox();
             this.grpanalisis.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudwValor)).BeginInit();
             this.SuspendLayout();
             // 
             // grpanalisis
             // 
+            this.grpanalisis.Controls.Add(this.lstValor);
             this.grpanalisis.Controls.Add(this.txtComentarios);
-            this.grpanalisis.Controls.Add(this.nudwValor);
             this.grpanalisis.Controls.Add(this.txtCorreo);
             this.grpanalisis.Controls.Add(this.txtNombre);
             this.grpanalisis.Controls.Add(this.lblComentarios);
@@ -120,13 +119,6 @@
             this.txtCorreo.Size = new System.Drawing.Size(228, 20);
             this.txtCorreo.TabIndex = 6;
             // 
-            // nudwValor
-            // 
-            this.nudwValor.Location = new System.Drawing.Point(272, 161);
-            this.nudwValor.Name = "nudwValor";
-            this.nudwValor.Size = new System.Drawing.Size(228, 20);
-            this.nudwValor.TabIndex = 7;
-            // 
             // txtComentarios
             // 
             this.txtComentarios.Location = new System.Drawing.Point(269, 209);
@@ -155,6 +147,20 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // lstValor
+            // 
+            this.lstValor.FormattingEnabled = true;
+            this.lstValor.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
+            this.lstValor.Location = new System.Drawing.Point(272, 161);
+            this.lstValor.Name = "lstValor";
+            this.lstValor.Size = new System.Drawing.Size(217, 30);
+            this.lstValor.TabIndex = 9;
+            // 
             // frmRseñaAnalisis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -169,7 +175,6 @@
             this.Load += new System.EventHandler(this.frmRseñaAnalisis_Load);
             this.grpanalisis.ResumeLayout(false);
             this.grpanalisis.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudwValor)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -178,7 +183,6 @@
 
         private System.Windows.Forms.GroupBox grpanalisis;
         private System.Windows.Forms.TextBox txtComentarios;
-        private System.Windows.Forms.NumericUpDown nudwValor;
         private System.Windows.Forms.TextBox txtCorreo;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblComentarios;
@@ -188,6 +192,7 @@
         private System.Windows.Forms.ListBox lstProductos;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.ListBox lstValor;
     }
 }
 
