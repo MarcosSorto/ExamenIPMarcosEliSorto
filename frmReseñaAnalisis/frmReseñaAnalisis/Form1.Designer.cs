@@ -36,18 +36,18 @@
             this.lblComentarios = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtCorreo = new System.Windows.Forms.TextBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.nudwValor = new System.Windows.Forms.NumericUpDown();
             this.txtComentarios = new System.Windows.Forms.TextBox();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.grpanalisis.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudwValor)).BeginInit();
             this.SuspendLayout();
             // 
             // grpanalisis
             // 
             this.grpanalisis.Controls.Add(this.txtComentarios);
-            this.grpanalisis.Controls.Add(this.numericUpDown1);
+            this.grpanalisis.Controls.Add(this.nudwValor);
             this.grpanalisis.Controls.Add(this.txtCorreo);
             this.grpanalisis.Controls.Add(this.txtNombre);
             this.grpanalisis.Controls.Add(this.lblComentarios);
@@ -57,7 +57,7 @@
             this.grpanalisis.Controls.Add(this.lstProductos);
             this.grpanalisis.Location = new System.Drawing.Point(12, 37);
             this.grpanalisis.Name = "grpanalisis";
-            this.grpanalisis.Size = new System.Drawing.Size(465, 304);
+            this.grpanalisis.Size = new System.Drawing.Size(513, 304);
             this.grpanalisis.TabIndex = 0;
             this.grpanalisis.TabStop = false;
             this.grpanalisis.Text = "Seleccione producto y realice análisis";
@@ -67,13 +67,13 @@
             this.lstProductos.FormattingEnabled = true;
             this.lstProductos.Location = new System.Drawing.Point(17, 28);
             this.lstProductos.Name = "lstProductos";
-            this.lstProductos.Size = new System.Drawing.Size(181, 264);
+            this.lstProductos.Size = new System.Drawing.Size(243, 264);
             this.lstProductos.TabIndex = 0;
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(220, 35);
+            this.lblNombre.Location = new System.Drawing.Point(266, 35);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(94, 13);
             this.lblNombre.TabIndex = 1;
@@ -82,7 +82,7 @@
             // lblCorreo
             // 
             this.lblCorreo.AutoSize = true;
-            this.lblCorreo.Location = new System.Drawing.Point(220, 95);
+            this.lblCorreo.Location = new System.Drawing.Point(266, 95);
             this.lblCorreo.Name = "lblCorreo";
             this.lblCorreo.Size = new System.Drawing.Size(97, 13);
             this.lblCorreo.TabIndex = 2;
@@ -91,7 +91,7 @@
             // lblValoracion
             // 
             this.lblValoracion.AutoSize = true;
-            this.lblValoracion.Location = new System.Drawing.Point(220, 145);
+            this.lblValoracion.Location = new System.Drawing.Point(266, 145);
             this.lblValoracion.Name = "lblValoracion";
             this.lblValoracion.Size = new System.Drawing.Size(57, 13);
             this.lblValoracion.TabIndex = 3;
@@ -100,7 +100,7 @@
             // lblComentarios
             // 
             this.lblComentarios.AutoSize = true;
-            this.lblComentarios.Location = new System.Drawing.Point(220, 193);
+            this.lblComentarios.Location = new System.Drawing.Point(266, 193);
             this.lblComentarios.Name = "lblComentarios";
             this.lblComentarios.Size = new System.Drawing.Size(68, 13);
             this.lblComentarios.TabIndex = 4;
@@ -108,28 +108,28 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(226, 57);
+            this.txtNombre.Location = new System.Drawing.Point(272, 57);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(228, 20);
             this.txtNombre.TabIndex = 5;
             // 
             // txtCorreo
             // 
-            this.txtCorreo.Location = new System.Drawing.Point(226, 111);
+            this.txtCorreo.Location = new System.Drawing.Point(272, 111);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(228, 20);
             this.txtCorreo.TabIndex = 6;
             // 
-            // numericUpDown1
+            // nudwValor
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(226, 161);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(228, 20);
-            this.numericUpDown1.TabIndex = 7;
+            this.nudwValor.Location = new System.Drawing.Point(272, 161);
+            this.nudwValor.Name = "nudwValor";
+            this.nudwValor.Size = new System.Drawing.Size(228, 20);
+            this.nudwValor.TabIndex = 7;
             // 
             // txtComentarios
             // 
-            this.txtComentarios.Location = new System.Drawing.Point(223, 209);
+            this.txtComentarios.Location = new System.Drawing.Point(269, 209);
             this.txtComentarios.Multiline = true;
             this.txtComentarios.Name = "txtComentarios";
             this.txtComentarios.Size = new System.Drawing.Size(228, 77);
@@ -143,30 +143,33 @@
             this.btnAceptar.TabIndex = 1;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(282, 357);
+            this.btnSalir.Location = new System.Drawing.Point(359, 357);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(104, 38);
             this.btnSalir.TabIndex = 2;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // frmRseñaAnalisis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(514, 407);
+            this.ClientSize = new System.Drawing.Size(568, 407);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.grpanalisis);
             this.Name = "frmRseñaAnalisis";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reseña Análisis de Productos";
+            this.Load += new System.EventHandler(this.frmRseñaAnalisis_Load);
             this.grpanalisis.ResumeLayout(false);
             this.grpanalisis.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudwValor)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -175,7 +178,7 @@
 
         private System.Windows.Forms.GroupBox grpanalisis;
         private System.Windows.Forms.TextBox txtComentarios;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown nudwValor;
         private System.Windows.Forms.TextBox txtCorreo;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblComentarios;
